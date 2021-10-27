@@ -1,0 +1,20 @@
+[
+    {
+        "title":"Fishing Hooks Project",
+        "isbn":"1234567890",
+        "author":"Ian Rios",
+        "description":"Lorem Ipsum Dolor i whatever"
+    },
+    {
+        "title":"Student Handbook",
+        "isbn":"098765421",
+        "author":"Nick Such",
+        "description":"Lorem Ipsum Dolor i whatever"
+    },
+    {
+        "title":"10001 ways to make a dad joke.",
+        "isbn":"19285623957",
+        "author":"Justin Hall",
+        "description":"Lorem Ipsum Dolor i whatever"
+    }
+]

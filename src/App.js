@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+import Navbar from './components/Navbar'
+
+import Home from './pages/Home'
+import Book from './pages/Book'
+import Account from './pages/Account'
+import Catalogue from './pages/Catalogue'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      <Router>
+        <div>
+          {/* navbar at the top */}
+          <Navbar />
+
+          {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+
+
+          {/* current page */}
+          <Switch>
+
+            <Route exact path="/fees">
+              <Account />
+            </Route>
+            <Route path="/catalogue">
+              <Catalogue />
+            </Route>
+            <Route path='/book/:isbn'>
+              <Book />
+            </Route>
+            <Route path={["/", '*']}>
+              <Home />
+            </Route>
+          </Switch>
+        </div>
+        {/* footer at the top */}
+      </Router>
+
+
+
+
   );
 }
 
